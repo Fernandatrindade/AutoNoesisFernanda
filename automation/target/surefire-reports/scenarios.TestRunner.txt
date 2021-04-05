@@ -1,0 +1,15 @@
+-------------------------------------------------------------------------------
+Test set: scenarios.TestRunner
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 18.213 s <<< FAILURE! - in scenarios.TestRunner
+Buscar medicos no Rio de Janeiro(Buscar Medicos)  Time elapsed: 17.87 s  <<< ERROR!
+exceptions.ElementException: 
+Ocorreu um erro ao executar uma acao no elemento: xpath //*[@id='react-tabs-1']//button[text() = 'Pesquisar']
+element click intercepted: Element <button class="Button Button--block Button--featured Button--secondary" type="submit">...</button> is not clickable at point (631, 562). Other element would receive the click: <div class="AutoSuggest__group-heading css-1bv77oq-group" id="react-select-2-group-3-heading">...</div>
+  (Session info: chrome=89.0.4389.114)
+Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
+System info: host: 'DESKTOP-4NTM1BC', ip: '192.168.1.6', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 89.0.4389.114, chrome: {chromedriverVersion: 89.0.4389.23 (61b08ee2c5002..., userDataDir: C:\Users\sankhya\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:55564}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: f238e95c302354a6208b73b5dc2c75c5
+
