@@ -9,6 +9,8 @@ Feature: Buscar Medicos
     And Clicar em Guia Médico
     And Digitar a sua busca "<estados>"
     And Clicar no botão pesquisar
+    And Validar a especiolidade e estado
+
 
 
 
