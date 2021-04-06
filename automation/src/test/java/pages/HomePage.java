@@ -1,7 +1,6 @@
 package pages;
 
 import config.PropertiesFile;
-import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import uimaps.HomeMap;
 import utils.GerarEvidenciasUtils;
@@ -17,7 +16,8 @@ public class HomePage extends BasePage {
      * @param url Url
      */
     @Given("^Acessar \"(.*)\"$")
-    public void acessarUrl(String url) throws Exception{
+    public void acessarUrl(String url) throws Exception {
+
         System.out.println("Acessando " + url);
         if (PropertiesFile.readPropertiesFile(url) != null) {
             url = PropertiesFile.readPropertiesFile(url);
@@ -32,7 +32,7 @@ public class HomePage extends BasePage {
      *
      * @throws Exception Se nao conseguir achar um elemento
      */
-    @And("^Clicar em Guia Médico")
+    @Given("^Clicar em Guia Médico")
     public void clicarEmGuiaMedico() throws Exception {
         esperarPagina();
         esperarImplicita();

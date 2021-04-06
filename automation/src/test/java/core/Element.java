@@ -249,4 +249,11 @@ public class Element {
             return false;
         }
     }
+    /**
+     * Retorna o tamanho de um elemento
+     *
+     * @return Numero de elementos encontrados
+     * @throws ElementException Se nao conseguir interagir com o elemento
+     */
+
 }

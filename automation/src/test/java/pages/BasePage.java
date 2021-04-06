@@ -33,18 +33,18 @@ public class BasePage {
     /**
      * Clica em um elemento
      *
-     * @param xpath Xpath do elemento a ser criado
+     * @param xpath         Xpath do elemento a ser criado
      * @param maxTentativas Máximos de tentativas para realizar o click
      * @throws Exception Se nao encontrar o elemento ou nao conseguir clicar
      */
-    protected void clicarRecriandoElemento(String xpath, Integer maxTentativas ) throws Exception {
+    protected void clicarRecriandoElemento(String xpath, Integer maxTentativas) throws Exception {
         Integer tentativa = 0;
 
-        while(tentativa < maxTentativas) {
+        while (tentativa < maxTentativas) {
             try {
                 new Element("xpath", xpath).click();
                 break;
-            } catch(StaleElementReferenceException e) {
+            } catch (StaleElementReferenceException e) {
                 System.out.println("STALE");
             }
             tentativa++;
@@ -87,7 +87,7 @@ public class BasePage {
         Driver.wait(element);
         element.clear();
         for (int i = 0; i < texto.length(); i++) {
-            element.sendKeys(texto.substring(i, i+1));
+            element.sendKeys(texto.substring(i, i + 1));
             Thread.sleep(100);
         }
 
@@ -270,7 +270,7 @@ public class BasePage {
      */
     protected void copiarColar(String conteudo) throws Exception {
         Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
-        StringSelection stringSelection = new StringSelection( conteudo );
+        StringSelection stringSelection = new StringSelection(conteudo);
         clipboard.setContents(stringSelection, stringSelection);
         Robot robot = new Robot();
         robot.keyPress(KeyEvent.VK_CONTROL);
@@ -295,5 +295,19 @@ public class BasePage {
     protected void moveToElement(Element element) throws Exception {
         Actions actions = new Actions(Driver.driver);
         actions.moveToElement(element.makeWebElement()).click().perform();
+    }
+
+    /**
+     * Fazer a extração de quantos elementos
+     *
+     * @param element Elemento
+     * @return
+     */
+    protected int getElementsSize(Element element) throws Exception {
+        Driver.wait(element);
+        int size = element.getElementsSize();
+        return size;
+
+
     }
 }

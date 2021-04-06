@@ -2,7 +2,7 @@ package pages;
 
 import config.PropertiesFile;
 import cucumber.api.java.en.And;
-import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.junit.Assert;
 import uimaps.GuiaMedicoMap;
@@ -18,14 +18,16 @@ public class GuiaMedicoPage extends BasePage {
      *
      * @throws Exception Se nao conseguir achar um elemento
      */
-    @And("^Digitar a sua busca \"(.*)\"$")
+    @When("^Digitar a sua busca \"(.*)\"$")
     public void procurarEstados(String estados) throws Exception {
         esperarPagina();
         esperarImplicita();
         clicar(guiaMedicoMap.txtBuscar);
-        preencher(guiaMedicoMap.txtPreencherBusca,estados);
+        preencher(guiaMedicoMap.txtPreencherBusca, estados);
         scrollToElement(guiaMedicoMap.txtPreencherBusca);
         clicar(guiaMedicoMap.txtPreencherBusca);
+        esperarPagina();
+        esperarImplicita();
         GerarEvidenciasUtils.takeScreenshot("Digitar a sua busca");
     }
 
@@ -35,31 +37,45 @@ public class GuiaMedicoPage extends BasePage {
      * @throws Exception Se nao conseguir achar um elemento
      */
     @And("^Clicar no botão pesquisar")
-    public void btnPesquisar () throws Exception {
+    public void btnPesquisar() throws Exception {
         esperarPagina();
         esperarImplicita();
         clicarEnter(guiaMedicoMap.btnPesquisar);
+        esperarPagina();
+        esperarImplicita();
         GerarEvidenciasUtils.takeScreenshot("Clicar em pesquisar");
+
     }
 
     /**
-     * Validar a especialidade e cidade
+     * Validar o estado e especialidade
      *
      * @throws Exception Se nao conseguir achar um elemento
      */
-    @And("^Validar a especialidade e cidade")
-    public void txtValidarEspecialidade() throws Exception {
+    @Then("^Validar a apresentação dos resultados com a Especialidade e Cidade no Estado  \"(.*)\"$")
+    public void txtValidarEstadoEspecialidade(String estado) throws Exception {
         esperarPagina();
-        esperarImplicita();
-        String validarElemento =  retornaValor(guiaMedicoMap.txtEspecialidade);
-        String validarElementoCidade = retornaValor(guiaMedicoMap.txtEstado);
-        if ( validarElemento !=null && validarElementoCidade != null) {
-            validaExistenciaElemento(guiaMedicoMap.txtEspecialidade);
-            validaExistenciaElemento(guiaMedicoMap.txtEstado);
-            Assert.assertNotNull(guiaMedicoMap.txtEspecialidade);
+        int sizeCard = getElementsSize(guiaMedicoMap.cmpCard);
+        System.out.println(sizeCard);
+        for (int x = 1; x <= sizeCard; x++) {
+
+            esperarPagina();
+            esperarImplicita();
+            esperarElemento(guiaMedicoMap.txtEstado(x, estado));
+            scrollToElement(guiaMedicoMap.txtEstado(x, estado));
+            String validarTxtEstado = retornaValor(guiaMedicoMap.txtEstado(x, estado));
+            System.out.println(validarTxtEstado);
+
+            Assert.assertTrue(validarTxtEstado, true);
+
+            esperarElemento(guiaMedicoMap.txtEspecialidade(x));
+            scrollToElement(guiaMedicoMap.txtEspecialidade(x));
+            String validarEspecialidade = retornaValor(guiaMedicoMap.txtEspecialidade(x));
+            Assert.assertTrue(validarEspecialidade, true);
+
         }
 
-        GerarEvidenciasUtils.takeScreenshot("Validar especialidade e cidade");
+        GerarEvidenciasUtils.takeScreenshot("Validar estado e especialidade ");
     }
 
     /**
@@ -67,12 +83,31 @@ public class GuiaMedicoPage extends BasePage {
      *
      * @throws Exception Se nao conseguir achar um elemento
      */
-    @And("^Validar estados \"(.*)\"$")
-    public void txtValidar (String cidade) throws Exception {
+    @Then("^Validar estado que não contem a cidade \"(.*)\"$")
+    public void txtValidar(String estado) throws Exception {
         esperarPagina();
         esperarImplicita();
-       // Assert.assertTrue(guiaMedicoMap.txtEstado).toLowerCase().contains(estatos);
-        //Assert.assertNotNull(guiaMedicoMap.txtEstado, cidade);
-        GerarEvidenciasUtils.takeScreenshot("Validar  cidade");
+
+        scrollToElement(guiaMedicoMap.btnVermais);
+        clicar(guiaMedicoMap.btnVermais);
+        scrollToElement(guiaMedicoMap.btnVermais);
+        clicar(guiaMedicoMap.btnVermais);
+
+        int sizeCard = getElementsSize(guiaMedicoMap.cmpCard);
+        System.out.println(sizeCard);
+
+        for (int x = 1; x <= sizeCard; x++) {
+            esperarPagina();
+            esperarImplicita();
+            esperarElemento(guiaMedicoMap.txtEstado(x, estado));
+            String validarEstadoPresente = retornaValor(guiaMedicoMap.txtEstado(x, estado));
+            String validarEstadoNaoPresente = retornaValor(guiaMedicoMap.txtEstado(x, estado));
+
+            Assert.assertTrue(validarEstadoPresente, true);
+            Assert.assertFalse(validarEstadoNaoPresente, false);
+        }
+        GerarEvidenciasUtils.takeScreenshot("Validar estados que não contem na pagina ");
+
     }
 }
+

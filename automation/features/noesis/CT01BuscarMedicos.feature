@@ -1,20 +1,30 @@
+@smokeTest
 @buscarMedicos
-Feature: Buscar Medicos
+Feature: Validar busca de medicos com as suas  especialidades da uma região desejada
 
   Background:
     Given Acessar "urlUnimed"
 
-  @buscar
-  Scenario Outline: Buscar medicos no Rio de Janeiro
-    And Clicar em Guia Médico
-    And Digitar a sua busca "<estados>"
+  @buscarMedicosNaRegiao
+  Scenario Outline: Buscar medicos na região "<estados>"
+    Given Clicar em Guia Médico
+    When Digitar a sua busca "<estados>"
     And Clicar no botão pesquisar
-    And Validar a especialidade
-    And Validar estados "<estados>"
-
-
+    Then Validar a apresentação dos resultados com a Especialidade e Cidade no Estado  "<estados>"
 
 
     Examples:
       | estados        |
       | Rio de Janeiro |
+
+  @validarBuscaDeMedicos
+  Scenario Outline: Validar buscar de medicos somente na Região "<estados>"
+    Given Clicar em Guia Médico
+    When Digitar a sua busca "<estados>"
+    And Clicar no botão pesquisar
+    Then Validar estado que não contem a cidade "<cidadeNao>"
+
+
+    Examples:
+      | estados        | cidadeNao |
+      | Rio de Janeiro | São Paulo |
