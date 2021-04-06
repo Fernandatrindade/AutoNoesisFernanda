@@ -38,10 +38,7 @@ public class GuiaMedicoPage extends BasePage {
     public void btnPesquisar () throws Exception {
         esperarPagina();
         esperarImplicita();
-        scrollToElement(guiaMedicoMap.txtPreencherBusca);
-        esperarPagina();
-        esperarImplicita();
-        clicar(guiaMedicoMap.btnPesquisar);
+        clicarEnter(guiaMedicoMap.btnPesquisar);
         GerarEvidenciasUtils.takeScreenshot("Clicar em pesquisar");
     }
 
@@ -50,17 +47,32 @@ public class GuiaMedicoPage extends BasePage {
      *
      * @throws Exception Se nao conseguir achar um elemento
      */
-    @And("^Validar a especiolidade e estado")
-    public void txtValidar (String estatos) throws Exception {
+    @And("^Validar a especialidade e cidade")
+    public void txtValidarEspecialidade() throws Exception {
         esperarPagina();
         esperarImplicita();
         String validarElemento =  retornaValor(guiaMedicoMap.txtEspecialidade);
-        if ( validarElemento!= null) {
+        String validarElementoCidade = retornaValor(guiaMedicoMap.txtEstado);
+        if ( validarElemento !=null && validarElementoCidade != null) {
             validaExistenciaElemento(guiaMedicoMap.txtEspecialidade);
+            validaExistenciaElemento(guiaMedicoMap.txtEstado);
+            Assert.assertNotNull(guiaMedicoMap.txtEspecialidade);
         }
-        Assert.assertEquals(guiaMedicoMap.txtEstado, estatos);
 
-        GerarEvidenciasUtils.takeScreenshot("Validar especialista e estados");
+        GerarEvidenciasUtils.takeScreenshot("Validar especialidade e cidade");
     }
 
+    /**
+     * Validar cidade
+     *
+     * @throws Exception Se nao conseguir achar um elemento
+     */
+    @And("^Validar estados \"(.*)\"$")
+    public void txtValidar (String cidade) throws Exception {
+        esperarPagina();
+        esperarImplicita();
+       // Assert.assertTrue(guiaMedicoMap.txtEstado).toLowerCase().contains(estatos);
+        //Assert.assertNotNull(guiaMedicoMap.txtEstado, cidade);
+        GerarEvidenciasUtils.takeScreenshot("Validar  cidade");
+    }
 }

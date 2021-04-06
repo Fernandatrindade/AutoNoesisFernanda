@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="scenarios.TestRunner" time="20.251" tests="1" errors="1" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="scenarios.TestRunner" time="22.578" tests="1" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="16"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -16,7 +16,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="BR"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-16\bin"/>
-    <property name="sun.java.command" value="C:\Users\sankhya\AppData\Local\Temp\surefire10826853345825683507\surefirebooter5789732033784491442.jar C:\Users\sankhya\AppData\Local\Temp\surefire10826853345825683507 2021-04-05T22-25-50_766-jvmRun1 surefire4508459061332200090tmp surefire_02873524876700524951tmp"/>
+    <property name="sun.java.command" value="C:\Users\sankhya\AppData\Local\Temp\surefire13267434461707991374\surefirebooter5766653401150106874.jar C:\Users\sankhya\AppData\Local\Temp\surefire13267434461707991374 2021-04-06T00-10-10_666-jvmRun1 surefire161100039455479148tmp surefire_06523602914670073727tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="C:\Users\sankhya\Desktop\WorkSpace\AutoNoesisFernanda\automation\target\test-classes;C:\Users\sankhya\Desktop\WorkSpace\AutoNoesisFernanda\automation\target\classes;C:\Users\sankhya\.m2\repository\org\apache\commons\commons-email\1.3.1\commons-email-1.3.1.jar;C:\Users\sankhya\.m2\repository\javax\mail\mail\1.4.5\mail-1.4.5.jar;C:\Users\sankhya\.m2\repository\javax\activation\activation\1.1.1\activation-1.1.1.jar;C:\Users\sankhya\.m2\repository\io\cucumber\cucumber-core\3.0.2\cucumber-core-3.0.2.jar;C:\Users\sankhya\.m2\repository\io\cucumber\cucumber-html\0.2.7\cucumber-html-0.2.7.jar;C:\Users\sankhya\.m2\repository\io\cucumber\gherkin\5.0.0\gherkin-5.0.0.jar;C:\Users\sankhya\.m2\repository\io\cucumber\tag-expressions\1.1.1\tag-expressions-1.1.1.jar;C:\Users\sankhya\.m2\repository\io\cucumber\cucumber-expressions\5.0.19\cucumber-expressions-5.0.19.jar;C:\Users\sankhya\.m2\repository\io\cucumber\datatable\1.0.3\datatable-1.0.3.jar;C:\Users\sankhya\.m2\repository\io\cucumber\datatable-dependencies\1.0.3\datatable-dependencies-1.0.3.jar;C:\Users\sankhya\.m2\repository\io\cucumber\cucumber-java8\3.0.2\cucumber-java8-3.0.2.jar;C:\Users\sankhya\.m2\repository\io\cucumber\cucumber-java\3.0.2\cucumber-java-3.0.2.jar;C:\Users\sankhya\.m2\repository\net\jodah\typetools\0.5.0\typetools-0.5.0.jar;C:\Users\sankhya\.m2\repository\junit\junit\4.12\junit-4.12.jar;C:\Users\sankhya\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\sankhya\.m2\repository\org\seleniumhq\selenium\selenium-java\3.14.0\selenium-java-3.14.0.jar;C:\Users\sankhya\.m2\repository\org\seleniumhq\selenium\selenium-api\3.14.0\selenium-api-3.14.0.jar;C:\Users\sankhya\.m2\repository\org\seleniumhq\selenium\selenium-chrome-driver\3.14.0\selenium-chrome-driver-3.14.0.jar;C:\Users\sankhya\.m2\repository\org\seleniumhq\selenium\selenium-edge-driver\3.14.0\selenium-edge-driver-3.14.0.jar;C:\Users\sankhya\.m2\repository\org\seleniumhq\selenium\selenium-firefox-driver\3.14.0\selenium-firefox-driver-3.14.0.jar;C:\Users\sankhya\.m2\repository\org\seleniumhq\selenium\selenium-ie-driver\3.14.0\selenium-ie-driver-3.14.0.jar;C:\Users\sankhya\.m2\repository\org\seleniumhq\selenium\selenium-opera-driver\3.14.0\selenium-opera-driver-3.14.0.jar;C:\Users\sankhya\.m2\repository\org\seleniumhq\selenium\selenium-remote-driver\3.14.0\selenium-remote-driver-3.14.0.jar;C:\Users\sankhya\.m2\repository\org\seleniumhq\selenium\selenium-safari-driver\3.14.0\selenium-safari-driver-3.14.0.jar;C:\Users\sankhya\.m2\repository\org\seleniumhq\selenium\selenium-support\3.14.0\selenium-support-3.14.0.jar;C:\Users\sankhya\.m2\repository\net\bytebuddy\byte-buddy\1.8.15\byte-buddy-1.8.15.jar;C:\Users\sankhya\.m2\repository\org\apache\commons\commons-exec\1.3\commons-exec-1.3.jar;C:\Users\sankhya\.m2\repository\commons-codec\commons-codec\1.10\commons-codec-1.10.jar;C:\Users\sankhya\.m2\repository\commons-logging\commons-logging\1.2\commons-logging-1.2.jar;C:\Users\sankhya\.m2\repository\com\google\guava\guava\25.0-jre\guava-25.0-jre.jar;C:\Users\sankhya\.m2\repository\com\google\code\findbugs\jsr305\1.3.9\jsr305-1.3.9.jar;C:\Users\sankhya\.m2\repository\org\checkerframework\checker-compat-qual\2.0.0\checker-compat-qual-2.0.0.jar;C:\Users\sankhya\.m2\repository\com\google\errorprone\error_prone_annotations\2.1.3\error_prone_annotations-2.1.3.jar;C:\Users\sankhya\.m2\repository\com\google\j2objc\j2objc-annotations\1.1\j2objc-annotations-1.1.jar;C:\Users\sankhya\.m2\repository\org\codehaus\mojo\animal-sniffer-annotations\1.14\animal-sniffer-annotations-1.14.jar;C:\Users\sankhya\.m2\repository\org\apache\httpcomponents\httpclient\4.5.5\httpclient-4.5.5.jar;C:\Users\sankhya\.m2\repository\org\apache\httpcomponents\httpcore\4.4.9\httpcore-4.4.9.jar;C:\Users\sankhya\.m2\repository\com\squareup\okhttp3\okhttp\3.10.0\okhttp-3.10.0.jar;C:\Users\sankhya\.m2\repository\com\squareup\okio\okio\1.14.1\okio-1.14.1.jar;C:\Users\sankhya\.m2\repository\org\apache\commons\commons-lang3\3.1\commons-lang3-3.1.jar;C:\Users\sankhya\.m2\repository\io\cucumber\cucumber-junit\3.0.2\cucumber-junit-3.0.2.jar;C:\Users\sankhya\.m2\repository\org\apache\poi\poi\3.13\poi-3.13.jar;C:\Users\sankhya\.m2\repository\org\apache\poi\poi-ooxml\3.13\poi-ooxml-3.13.jar;C:\Users\sankhya\.m2\repository\org\apache\poi\poi-ooxml-schemas\3.13\poi-ooxml-schemas-3.13.jar;C:\Users\sankhya\.m2\repository\org\apache\xmlbeans\xmlbeans\2.6.0\xmlbeans-2.6.0.jar;C:\Users\sankhya\.m2\repository\stax\stax-api\1.0.1\stax-api-1.0.1.jar;C:\Users\sankhya\.m2\repository\commons-io\commons-io\2.6\commons-io-2.6.jar;C:\Users\sankhya\.m2\repository\info\cukes\cucumber-java\1.2.5\cucumber-java-1.2.5.jar;C:\Users\sankhya\.m2\repository\info\cukes\cucumber-core\1.2.5\cucumber-core-1.2.5.jar;C:\Users\sankhya\.m2\repository\info\cukes\cucumber-html\0.2.3\cucumber-html-0.2.3.jar;C:\Users\sankhya\.m2\repository\info\cukes\cucumber-jvm-deps\1.0.5\cucumber-jvm-deps-1.0.5.jar;C:\Users\sankhya\.m2\repository\info\cukes\cucumber-junit\1.2.5\cucumber-junit-1.2.5.jar;C:\Users\sankhya\.m2\repository\info\cukes\cucumber-picocontainer\1.2.5\cucumber-picocontainer-1.2.5.jar;C:\Users\sankhya\.m2\repository\info\cukes\gherkin\2.12.2\gherkin-2.12.2.jar;C:\Users\sankhya\.m2\repository\org\picocontainer\picocontainer\2.15\picocontainer-2.15.jar;C:\Users\sankhya\.m2\repository\com\aventstack\extentreports\3.1.2\extentreports-3.1.2.jar;C:\Users\sankhya\.m2\repository\org\freemarker\freemarker\2.3.23\freemarker-2.3.23.jar;C:\Users\sankhya\.m2\repository\org\mongodb\mongodb-driver\3.3.0\mongodb-driver-3.3.0.jar;C:\Users\sankhya\.m2\repository\org\mongodb\bson\3.3.0\bson-3.3.0.jar;C:\Users\sankhya\.m2\repository\org\mongodb\mongodb-driver-core\3.3.0\mongodb-driver-core-3.3.0.jar;C:\Users\sankhya\.m2\repository\org\apache\httpcomponents\httpmime\4.5.2\httpmime-4.5.2.jar;C:\Users\sankhya\.m2\repository\org\jsoup\jsoup\1.9.2\jsoup-1.9.2.jar;C:\Users\sankhya\.m2\repository\com\google\code\gson\gson\2.8.0\gson-2.8.0.jar;C:\Users\sankhya\.m2\repository\com\vimalselvam\cucumber-extentsreport\3.0.2\cucumber-extentsreport-3.0.2.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -31,7 +31,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\sankhya\AppData\Local\Temp\surefire10826853345825683507\surefirebooter5789732033784491442.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\sankhya\AppData\Local\Temp\surefire13267434461707991374\surefirebooter5766653401150106874.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="16+36-2231"/>
@@ -58,61 +58,5 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="60.0"/>
   </properties>
-  <testcase name="Buscar medicos no Rio de Janeiro" classname="Buscar Medicos" time="19.779">
-    <error message="Ocorreu um erro ao executar uma acao no elemento: xpath //*[@id=&apos;react-tabs-1&apos;]//button[text() = &apos;Pesquisar&apos;]&#10;element click intercepted: Element &lt;button class=&quot;Button Button--block Button--featured Button--secondary&quot; type=&quot;submit&quot;&gt;...&lt;/button&gt; is not clickable at point (631, 171). Other element would receive the click: &lt;div class=&quot;AutoSuggest__group-heading css-1bv77oq-group&quot; id=&quot;react-select-2-group-3-heading&quot;&gt;...&lt;/div&gt;&#10;  (Session info: chrome=89.0.4389.114)&#10;Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:19:58.91Z&apos;&#10;System info: host: &apos;DESKTOP-4NTM1BC&apos;, ip: &apos;192.168.1.6&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;16&apos;&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 89.0.4389.114, chrome: {chromedriverVersion: 89.0.4389.23 (61b08ee2c5002..., userDataDir: C:\Users\sankhya\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:52639}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Session ID: 94b10bace538a7f098be0ba844c50770" type="exceptions.ElementException"><![CDATA[exceptions.ElementException: 
-Ocorreu um erro ao executar uma acao no elemento: xpath //*[@id='react-tabs-1']//button[text() = 'Pesquisar']
-element click intercepted: Element <button class="Button Button--block Button--featured Button--secondary" type="submit">...</button> is not clickable at point (631, 171). Other element would receive the click: <div class="AutoSuggest__group-heading css-1bv77oq-group" id="react-select-2-group-3-heading">...</div>
-  (Session info: chrome=89.0.4389.114)
-Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
-System info: host: 'DESKTOP-4NTM1BC', ip: '192.168.1.6', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 89.0.4389.114, chrome: {chromedriverVersion: 89.0.4389.23 (61b08ee2c5002..., userDataDir: C:\Users\sankhya\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:52639}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 94b10bace538a7f098be0ba844c50770
-]]></error>
-    <system-out><![CDATA[@buscarMedicos
-Feature: Buscar Medicos
-
-  @buscar
-  Scenario Outline: Buscar medicos no Rio de Janeiro # features/noesis/CT01BuscarMedicos.feature:8
-    And Clicar em Guia Médico
-    And Digitar a sua busca "<estados>"
-    And Clicar no botão pesquisar
-    And Validar a especiolidade e estado
-
-    Examples: 
-
-  Background:                 # features/noesis/CT01BuscarMedicos.feature:4
-====> Caso de Teste: Buscar medicos no Rio de Janeiro
-Acessando urlUnimed
-    Given Acessar "urlUnimed" # HomePage.acessarUrl(String)
-
-  @buscarMedicos @buscar
-  Scenario Outline: Buscar medicos no Rio de Janeiro # features/noesis/CT01BuscarMedicos.feature:19
-    And Clicar em Guia Médico                        # HomePage.clicarEmGuiaMedico()
-    And Digitar a sua busca "Rio de Janeiro"         # GuiaMedicoPage.procurarEstados(String)
-    And Clicar no botão pesquisar                    # GuiaMedicoPage.btnPesquisar()
-      exceptions.ElementException: Ocorreu um erro ao executar uma acao no elemento: xpath //*[@id='react-tabs-1']//button[text() = 'Pesquisar']
-element click intercepted: Element <button class="Button Button--block Button--featured Button--secondary" type="submit">...</button> is not clickable at point (631, 171). Other element would receive the click: <div class="AutoSuggest__group-heading css-1bv77oq-group" id="react-select-2-group-3-heading">...</div>
-  (Session info: chrome=89.0.4389.114)
-Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
-System info: host: 'DESKTOP-4NTM1BC', ip: '192.168.1.6', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 89.0.4389.114, chrome: {chromedriverVersion: 89.0.4389.23 (61b08ee2c5002..., userDataDir: C:\Users\sankhya\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:52639}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 94b10bace538a7f098be0ba844c50770
-	at core.Element.click(Element.java:87)
-	at pages.BasePage.clicar(BasePage.java:30)
-	at pages.GuiaMedicoPage.btnPesquisar(GuiaMedicoPage.java:44)
-	at ?.Clicar no botão pesquisar(features/noesis/CT01BuscarMedicos.feature:11)
-
-    And Validar a especiolidade e estado             # GuiaMedicoPage.txtValidar(String)
-Erro ao gerar documento de evidências do caso Buscar medicos no Rio de Janeiro
-]]></system-out>
-    <system-err><![CDATA[Starting ChromeDriver 89.0.4389.23 (61b08ee2c50024bab004e48d2b1b083cdbdac579-refs/branch-heads/4389@{#294}) on port 23307
-Only local connections are allowed.
-Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
-ChromeDriver was started successfully.
-abr. 05, 2021 10:25:52 PM org.openqa.selenium.remote.ProtocolHandshake createSession
-INFO: Detected dialect: W3C
-]]></system-err>
-  </testcase>
+  <testcase name="Buscar medicos no Rio de Janeiro" classname="Buscar Medicos" time="22.223"/>
 </testsuite>
