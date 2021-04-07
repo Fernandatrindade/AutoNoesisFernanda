@@ -1,5 +1,5 @@
 # Introdução
-Automação de testes para validar a  busca de medicos com as suas  especialidades da uma região desejada ou somente de uma região.
+Automação de web para validar a  busca de medicos com as suas  especialidades da uma região desejada ou somente de uma região.
 
 # Ferramenta para automação de API 
 Selenium IDE, cucumber, InteliJ IDE, junit
@@ -16,6 +16,5 @@ Para executar a suíte de testes, basta executar o seguinte comando:
 ```shell script
 mvn clean test -Dcucumber.options="--tags @buscarMedicos"  -Dbrowser=chrome -Dlanguage=pt-BR
 ```
-
 
 
