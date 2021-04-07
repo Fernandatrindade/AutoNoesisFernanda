@@ -17,4 +17,9 @@ Para executar a suíte de testes, basta executar o seguinte comando:
 mvn clean test -Dcucumber.options="--tags @buscarMedicos"  -Dbrowser=chrome -Dlanguage=pt-BR
 ```
 
+# Evidencias
+
+As evidencias de teste se encontram na pasta \output
+O relatorio se encontra na pasta \report-html
+
 
