@@ -1,7 +1,7 @@
 # Introdução
 Automação de web para validar a  busca de medicos com as suas  especialidades da uma região desejada ou somente de uma região.
 
-# Ferramenta para automação de API 
+# Ferramenta para automação de web
 Selenium IDE, cucumber, InteliJ IDE, junit
 
 # Pré condições para a execução do projeto
