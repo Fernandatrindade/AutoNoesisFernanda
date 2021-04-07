@@ -93,7 +93,6 @@ public class GuiaMedicoPage extends BasePage {
         clicar(guiaMedicoMap.btnVermais);
 
         int sizeCard = getElementsSize(guiaMedicoMap.cmpCard);
-        System.out.println(sizeCard);
 
         for (int x = 1; x <= sizeCard; x++) {
             esperarPagina();
