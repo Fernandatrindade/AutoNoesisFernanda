@@ -56,7 +56,7 @@ public class GuiaMedicoPage extends BasePage {
     public void txtValidarEstadoEspecialidade(String estado) throws Exception {
         esperarPagina();
         int sizeCard = getElementsSize(guiaMedicoMap.cmpCard);
-        System.out.println(sizeCard);
+
         for (int x = 1; x <= sizeCard; x++) {
 
             esperarPagina();
@@ -64,9 +64,8 @@ public class GuiaMedicoPage extends BasePage {
             esperarElemento(guiaMedicoMap.txtEstado(x, estado));
             scrollToElement(guiaMedicoMap.txtEstado(x, estado));
             String validarTxtEstado = retornaValor(guiaMedicoMap.txtEstado(x, estado));
-            System.out.println(validarTxtEstado);
-
             Assert.assertTrue(validarTxtEstado, true);
+            Assert.assertEquals(estado,estado);
 
             esperarElemento(guiaMedicoMap.txtEspecialidade(x));
             scrollToElement(guiaMedicoMap.txtEspecialidade(x));

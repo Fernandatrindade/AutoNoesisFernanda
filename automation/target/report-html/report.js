@@ -1,6 +1,6 @@
 $(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("features/noesis/CT01BuscarMedicos.feature");
 formatter.feature({
-  "name": "Buscar Medicos",
+  "name": "Validar busca de medicos com as suas  especialidades da uma região desejada",
   "description": "",
   "keyword": "Feature",
   "tags": [
@@ -10,25 +10,30 @@ formatter.feature({
   ]
 });
 formatter.scenarioOutline({
-  "name": "Buscar medicos no Rio de Janeiro",
+  "name": "Buscar medicos na região",
   "description": "",
-  "keyword": "Scenario Outline"
+  "keyword": "Scenario Outline",
+  "tags": [
+    {
+      "name": "@buscarMedicosNaRegiao"
+    }
+  ]
 });
 formatter.step({
   "name": "Clicar em Guia Médico",
-  "keyword": "And "
+  "keyword": "Given "
 });
 formatter.step({
   "name": "Digitar a sua busca \"\u003cestados\u003e\"",
-  "keyword": "And "
+  "keyword": "When "
 });
 formatter.step({
   "name": "Clicar no botão pesquisar",
   "keyword": "And "
 });
 formatter.step({
-  "name": "Validar especialidade no estado \"\u003cestados\u003e\"",
-  "keyword": "And "
+  "name": "Validar a apresentação dos resultados com a Especialidade e Cidade no Estado  \"\u003cestados\u003e\"",
+  "keyword": "Then "
 });
 formatter.examples({
   "name": "",
@@ -66,18 +71,21 @@ formatter.result({
   "status": "passed"
 });
 formatter.scenario({
-  "name": "Buscar medicos no Rio de Janeiro",
+  "name": "Buscar medicos na região",
   "description": "",
   "keyword": "Scenario Outline",
   "tags": [
     {
       "name": "@buscarMedicos"
+    },
+    {
+      "name": "@buscarMedicosNaRegiao"
     }
   ]
 });
 formatter.step({
   "name": "Clicar em Guia Médico",
-  "keyword": "And "
+  "keyword": "Given "
 });
 formatter.match({
   "location": "HomePage.clicarEmGuiaMedico()"
@@ -87,7 +95,7 @@ formatter.result({
 });
 formatter.step({
   "name": "Digitar a sua busca \"Rio de Janeiro\"",
-  "keyword": "And "
+  "keyword": "When "
 });
 formatter.match({
   "location": "GuiaMedicoPage.procurarEstados(String)"
@@ -106,8 +114,8 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "Validar especialidade no estado \"Rio de Janeiro\"",
-  "keyword": "And "
+  "name": "Validar a apresentação dos resultados com a Especialidade e Cidade no Estado  \"Rio de Janeiro\"",
+  "keyword": "Then "
 });
 formatter.match({
   "location": "GuiaMedicoPage.txtValidarEstadoEspecialidade(String)"
@@ -119,17 +127,22 @@ formatter.after({
   "status": "passed"
 });
 formatter.scenarioOutline({
-  "name": "Buscar medicos somente na cidade do Rio de Janeiro",
+  "name": "Validar buscar de medicos somente na Região",
   "description": "",
-  "keyword": "Scenario Outline"
+  "keyword": "Scenario Outline",
+  "tags": [
+    {
+      "name": "@validarBuscaDeMedicos"
+    }
+  ]
 });
 formatter.step({
   "name": "Clicar em Guia Médico",
-  "keyword": "And "
+  "keyword": "Given "
 });
 formatter.step({
   "name": "Digitar a sua busca \"\u003cestados\u003e\"",
-  "keyword": "And "
+  "keyword": "When "
 });
 formatter.step({
   "name": "Clicar no botão pesquisar",
@@ -137,7 +150,7 @@ formatter.step({
 });
 formatter.step({
   "name": "Validar estado que não contem a cidade \"\u003ccidadeNao\u003e\"",
-  "keyword": "And "
+  "keyword": "Then "
 });
 formatter.examples({
   "name": "",
@@ -177,18 +190,21 @@ formatter.result({
   "status": "passed"
 });
 formatter.scenario({
-  "name": "Buscar medicos somente na cidade do Rio de Janeiro",
+  "name": "Validar buscar de medicos somente na Região",
   "description": "",
   "keyword": "Scenario Outline",
   "tags": [
     {
       "name": "@buscarMedicos"
+    },
+    {
+      "name": "@validarBuscaDeMedicos"
     }
   ]
 });
 formatter.step({
   "name": "Clicar em Guia Médico",
-  "keyword": "And "
+  "keyword": "Given "
 });
 formatter.match({
   "location": "HomePage.clicarEmGuiaMedico()"
@@ -198,7 +214,7 @@ formatter.result({
 });
 formatter.step({
   "name": "Digitar a sua busca \"Rio de Janeiro\"",
-  "keyword": "And "
+  "keyword": "When "
 });
 formatter.match({
   "location": "GuiaMedicoPage.procurarEstados(String)"
@@ -218,7 +234,7 @@ formatter.result({
 });
 formatter.step({
   "name": "Validar estado que não contem a cidade \"São Paulo\"",
-  "keyword": "And "
+  "keyword": "Then "
 });
 formatter.match({
   "location": "GuiaMedicoPage.txtValidar(String)"
